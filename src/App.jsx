@@ -6,10 +6,12 @@ import Home from "./components/Home";
 import CreatPost from "./components/CreatPost";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/creatpost" element={<CreatPost />}></Route>
