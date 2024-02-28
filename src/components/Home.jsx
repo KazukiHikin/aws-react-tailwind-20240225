@@ -4,6 +4,9 @@ import Earth from "../images/earth.svg";
 import TV from "../images/tv.png";
 import ReactPlayer from "react-player";
 import video1 from "../videos/video-tv-jp1.mp4";
+import Mobile from "../images/mobile-0819.jpg";
+import BoxShot from "../images/boxshot.png";
+import DownloadIcon from "../videos/download-icon.gif";
 
 const Home = () => {
   return (
@@ -73,7 +76,7 @@ const Home = () => {
         </div>
       </div>
       {/* Enjoy on your Start Section */}
-      <section className="w-[100%] bg-black border-t-[7px] border-t-[#605d5d] sm:py-[100px] py-[50px]">
+      <section className="w-[100%] bg-black border-t-[7px] border-t-[#605d5d] sm:py-[50px] py-[50px]">
         <div className="max-w-[1170px] mx-auto px-4">
           <div className="grid sm:grid-cols-2 grid-cols-1 text-center sm:text-start items-center">
             <div className="text-white">
@@ -97,8 +100,35 @@ const Home = () => {
                   height=""
                 />
               </div>
-              <img src={TV} alt="" className="relative z-10" /> {/* positionを何か指定しないとz-indexが効かない */}
+              <img src={TV} alt="" className="relative z-10" />{" "}
+              {/* positionを何か指定しないとz-indexが効かない */}
             </figure>
+          </div>
+        </div>
+      </section>
+      {/* DoenLoad Section Start */}
+      <section className="w-[100%] bg-black border-t-[7px] border-t-[#605d5d] sm:py-[50px] py-[50px]">
+        <div className="max-w-[1170px] mx-auto px-4">
+          <div className="grid sm:grid-cols-2 grid-cols-1 text-center sm:text-start items-center">
+            <figure className="relative sm:order-1 order-2">
+              <img src={Mobile} alt="" className="" />
+              <div className="flex bg-black border-2 border-[rgba(128,128,128,0.7)] rounded-xl h-[70px] w-[80%] lg:w-[50%] mx-auto items-center absolute left-[10%] lg:left-[25%] bottom-[8%]">
+                <img src={BoxShot} alt="" className="h-[48px] ml-3 mr-3" />
+                <div className="w-[80%]">
+                  <p className="text-white">Stranger Things</p>
+                  <p className="text-blue-700">Downloading...</p>
+                </div>
+                <img src={DownloadIcon} alt="" className="w-12 h-12 md:mr-4" />
+              </div>
+            </figure>
+            <div className="text-white sm:order-2 order-1">
+              <h2 className="sm:text-[50px] text-[2rem] font-bold sm:leading-[60px] leading-[40px]">
+                Download your shows to watch offline
+              </h2>
+              <p className="sm:text-xl text-base pt-4">
+                Save your favourites easily and always have something to watch
+              </p>
+            </div>
           </div>
         </div>
       </section>
