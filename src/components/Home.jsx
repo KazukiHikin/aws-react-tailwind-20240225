@@ -7,6 +7,9 @@ import video1 from "../videos/video-tv-jp1.mp4";
 import Mobile from "../images/mobile-0819.jpg";
 import BoxShot from "../images/boxshot.png";
 import DownloadIcon from "../videos/download-icon.gif";
+import DeviceMac from "../images/device-pile-jp.png";
+import video2 from "../videos/video2.mp4";
+import Kids from "../images/kids.png";
 
 const Home = () => {
   return (
@@ -115,7 +118,7 @@ const Home = () => {
               <div className="flex bg-black border-2 border-[rgba(128,128,128,0.7)] rounded-xl h-[70px] w-[80%] lg:w-[50%] mx-auto items-center absolute left-[10%] lg:left-[25%] bottom-[8%]">
                 <img src={BoxShot} alt="" className="h-[48px] ml-3 mr-3" />
                 <div className="w-[80%]">
-                  <p className="text-white">Stranger Things</p>
+                  <p className="text-white font-bold">Stranger Things</p>
                   <p className="text-blue-700">Downloading...</p>
                 </div>
                 <img src={DownloadIcon} alt="" className="w-12 h-12 md:mr-4" />
@@ -130,6 +133,62 @@ const Home = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+      {/* Watch everywhere Section */}
+      <section className="w-[100%] bg-black border-t-[7px] border-t-[#605d5d] sm:py-[50px] py-[50px]">
+        <div className="max-w-[1170px] mx-auto px-4">
+          <div className="grid sm:grid-cols-2 grid-cols-1 text-center sm:text-start items-center">
+            <div className="text-white">
+              <h2 className="sm:text-5xl text-3xl font-bold">
+                Watch everywhere
+              </h2>
+              <p className="sm:text-xl text-base pt-4">
+                Stream unlimited movies and TV shows on your phone, tablet,
+                laptop, and TV.
+              </p>
+            </div>
+            <figure className="relative ">
+              <div className=" absolute top-[10%] left-[18%] z-0">
+                <ReactPlayer
+                  url={video2}
+                  // controls
+                  loop={true} // ループ再生を有効にする
+                  playing={true} // 自動再生を有効にする
+                  muted={true} //ミュートを有効,ミュート有効だと自動再生される
+                  width="76%" //ReactPlayerの動画サイズはここで指定する
+                  height=""
+                />
+              </div>
+              <img src={DeviceMac} alt="" className="relative z-10" />
+              {/* positionを何か指定しないとz-indexが効かない */}
+            </figure>
+          </div>
+        </div>
+      </section>
+      {/* Creat profiles for kids Section */}
+      <section className="w-[100%] bg-black border-t-[7px] border-t-[#605d5d] sm:py-[50px] py-[50px]">
+        <div className="max-w-[1170px] mx-auto px-4">
+          <div className="grid sm:grid-cols-2 grid-cols-1 text-center sm:text-start items-center">
+            <figure className="relative sm:order-1 order-2">
+              <img src={Kids} alt="" className="" />
+            </figure>
+            <div className="text-white sm:order-2 order-1">
+              <h2 className="sm:text-[50px] text-[2rem] font-bold sm:leading-[60px] leading-[40px]">
+                Create profiles for kids
+              </h2>
+              <p className="sm:text-xl text-base pt-4">
+                Send kids on adventures with their favorite characters in a
+                space made just for them—free with your membership.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Asked Questions Section */}
+      <section className="w-[100%] bg-black border-t-[7px] border-t-[#605d5d] sm:py-[50px] py-[50px]">
+        <div className="max-w-[1170px] mx-auto px-4 ">
+          <h2 className="sm:text-5xl text-3xl font-bold text-white text-center">Frequently Asked Questions</h2>
         </div>
       </section>
     </>
