@@ -93,7 +93,7 @@ const Home = () => {
                   loop={true} // ループ再生を有効にする
                   playing={true} // 自動再生を有効にする
                   muted={true} //ミュートを有効,ミュート有効だと自動再生される
-                  width="84%" //ReactPlayerの動画サイズはここで指定する
+                  width="87%" //ReactPlayerの動画サイズはここで指定する
                   height=""
                 />
               </div>
