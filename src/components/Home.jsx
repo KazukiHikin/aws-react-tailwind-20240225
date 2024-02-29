@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../images/logo.svg";
 import Earth from "../images/earth.svg";
 import TV from "../images/tv.png";
@@ -12,6 +12,12 @@ import video2 from "../videos/video2.mp4";
 import Kids from "../images/kids.png";
 
 const Home = () => {
+  const [clickState, setClickState] = useState(false);
+  const isActive = () => {
+    setClickState(!clickState);
+  };
+
+  console.log(clickState);
   return (
     <>
       {/* banner Section */}
@@ -188,7 +194,37 @@ const Home = () => {
       {/* Asked Questions Section */}
       <section className="w-[100%] bg-black border-t-[7px] border-t-[#605d5d] sm:py-[50px] py-[50px]">
         <div className="max-w-[1170px] mx-auto px-4 ">
-          <h2 className="sm:text-5xl text-3xl font-bold text-white text-center">Frequently Asked Questions</h2>
+          <h2 className="sm:text-5xl text-3xl font-bold text-white text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="py-[30px]">
+            <div className="bg-[rgb(45,45,45)] text-white">
+              <div
+                className="p-[20px] text-[30px] border-b-2 border-black flex cursor-pointer justify-between hover:bg-[rgb(65,65,65)] transition-all duration-300"
+                onClick={isActive}
+              >
+                <h3>What is Netflix?</h3>
+                <span>{clickState ? "×":"+"}</span>
+
+              </div>
+              <div
+                className={`${
+                  clickState === true ? "transition-all duration-500 transform origin-top ease-in" : "hidden"
+                } `}
+              >
+                <p>
+                  Netflix is a streaming service that offers a wide variety of
+                  award-winning TV shows, movies, anime, documentaries, and more
+                  on thousands of internet-connected devices.
+                </p>
+                <p>
+                  You can watch as much as you want, whenever you want – all for
+                  one low monthly price. There's always something new to
+                  discover and new TV shows and movies are added every week!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
