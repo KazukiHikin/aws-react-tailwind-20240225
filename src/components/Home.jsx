@@ -12,12 +12,8 @@ import video2 from "../videos/video2.mp4";
 import Kids from "../images/kids.png";
 
 const Home = () => {
-  const [clickState, setClickState] = useState(false);
-  const isActive = () => {
-    setClickState(!clickState);
-  };
+  const [activeQuestion, setActiveQuestion] = useState("");
 
-  console.log(clickState);
   return (
     <>
       {/* banner Section */}
@@ -198,25 +194,34 @@ const Home = () => {
             Frequently Asked Questions
           </h2>
           <div className="py-[30px]">
-            <div className="bg-[rgb(45,45,45)] text-white">
+            {/* Question1 */}
+            <div className="bg-[rgb(45,45,45)] text-white mb-[15px]">
               <div
-                className="p-[20px] text-[30px] border-b-2 border-black flex cursor-pointer justify-between hover:bg-[rgb(65,65,65)] transition-all duration-300"
-                onClick={isActive}
+                className="p-[20px] text-[30px] border-b-2 border-black flex cursor-pointer justify-between hover:bg-[rgb(65,65,65)] transition-all duration-300 items-center"
+                onClick={() => {
+                  if (activeQuestion === "question1") {
+                    setActiveQuestion("");
+                  } else {
+                    setActiveQuestion("question1");
+                  }
+                }}
               >
-                <h3>What is Netflix?</h3>
-                <span>{clickState ? "×":"+"}</span>
-
+                <h3 className="text-[18px] md:text-[24px]">What is Netflix?</h3>
+                <span>{activeQuestion === "question1" ? "×" : "+"}</span>
               </div>
               <div
                 className={`${
-                  clickState === true ? "transition-all duration-500 transform origin-top ease-in" : "hidden"
-                } `}
+                  activeQuestion === "question1"
+                    ? " scale-y-100 h-[auto] p-5"
+                    : " scale-y-0 h-[0px] "
+                } duration-300 origin-top text-[18px] md:text-[24px]`}
               >
                 <p>
                   Netflix is a streaming service that offers a wide variety of
                   award-winning TV shows, movies, anime, documentaries, and more
-                  on thousands of internet-connected devices.
+                  on thousands of internet-connected devices.{" "}
                 </p>
+                <br />
                 <p>
                   You can watch as much as you want, whenever you want – all for
                   one low monthly price. There's always something new to
@@ -224,9 +229,195 @@ const Home = () => {
                 </p>
               </div>
             </div>
+            {/* Question2 */}
+            <div className="bg-[rgb(45,45,45)] text-white mb-[15px]">
+              <div
+                className="p-[20px] text-[30px] border-b-2 border-black flex cursor-pointer justify-between hover:bg-[rgb(65,65,65)] transition-all duration-300 items-center"
+                onClick={() => {
+                  if (activeQuestion === "question2") {
+                    setActiveQuestion("");
+                  } else {
+                    setActiveQuestion("question2");
+                  }
+                }}
+              >
+                <h3 className="text-[18px] md:text-[24px]">How much does Netflix cost?</h3>
+                <span>{activeQuestion === "question2" ? "×" : "+"}</span>
+              </div>
+              <div
+                className={`${
+                  activeQuestion === "question2"
+                    ? " scale-y-100 h-[auto] p-5"
+                    : " scale-y-0 h-[0px] "
+                } duration-300 origin-top text-[18px] md:text-[24px]`}
+              >
+                <p>
+                  Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+                  streaming device, all for one fixed monthly fee. Plans range
+                  from JPY 1,980 to JPY 790 a month. No extra costs, no
+                  contracts.
+                </p>
+              </div>
+            </div>
+            {/* Question3 */}
+            <div className="bg-[rgb(45,45,45)] text-white mb-[15px]">
+              <div
+                className="p-[20px] text-[30px] border-b-2 border-black flex cursor-pointer justify-between hover:bg-[rgb(65,65,65)] transition-all duration-300 items-center"
+                onClick={() => {
+                  if (activeQuestion === "question3") {
+                    setActiveQuestion("");
+                  } else {
+                    setActiveQuestion("question3");
+                  }
+                }}
+              >
+                <h3 className="text-[18px] md:text-[24px]">Where can I watch?</h3>
+                <span>{activeQuestion === "question3" ? "×" : "+"}</span>
+              </div>
+              <div
+                className={`${
+                  activeQuestion === "question3"
+                    ? " scale-y-100 h-[auto] p-5"
+                    : " scale-y-0 h-[0px] "
+                } duration-300 origin-top text-[18px] md:text-[24px]`}
+              >
+                <p>
+                  Watch anywhere, anytime. Sign in with your Netflix account to
+                  watch instantly on the web at netflix.com from your personal
+                  computer or on any internet-connected device that offers the
+                  Netflix app, including smart TVs, smartphones, tablets,
+                  streaming media players and game consoles.
+                </p>
+                <br />
+                <p>
+                  You can also download your favorite shows with the iOS,
+                  Android, or Windows 10 app. Use downloads to watch while
+                  you're on the go and without an internet connection. Take
+                  Netflix with you anywhere.
+                </p>
+              </div>
+            </div>
+            {/* Question4 */}
+            <div className="bg-[rgb(45,45,45)] text-white mb-[15px]">
+              <div
+                className="p-[20px] text-[30px] border-b-2 border-black flex cursor-pointer justify-between hover:bg-[rgb(65,65,65)] transition-all duration-300 items-center"
+                onClick={() => {
+                  if (activeQuestion === "question4") {
+                    setActiveQuestion("");
+                  } else {
+                    setActiveQuestion("question4");
+                  }
+                }}
+              >
+                <h3 className="text-[18px] md:text-[24px]">How do I cancel?</h3>
+                <span>{activeQuestion === "question4" ? "×" : "+"}</span>
+              </div>
+              <div
+                className={`${
+                  activeQuestion === "question4"
+                    ? " scale-y-100 h-[auto] p-5"
+                    : " scale-y-0 h-[0px] "
+                } duration-300 origin-top text-[18px] md:text-[24px]`}
+              >
+                <p>
+                  Netflix is flexible. There are no pesky contracts and no
+                  commitments. You can easily cancel your account online in two
+                  clicks. There are no cancellation fees – start or stop your
+                  account anytime.
+                </p>
+              </div>
+            </div>
+            {/* Question5 */}
+            <div className="bg-[rgb(45,45,45)] text-white mb-[15px]">
+              <div
+                className="p-[20px] text-[30px] border-b-2 border-black flex cursor-pointer justify-between hover:bg-[rgb(65,65,65)] transition-all duration-300 items-center"
+                onClick={() => {
+                  if (activeQuestion === "question5") {
+                    setActiveQuestion("");
+                  } else {
+                    setActiveQuestion("question5");
+                  }
+                }}
+              >
+                <h3 className="text-[18px] md:text-[24px]">What can I watch on Netflix?</h3>
+                <span>{activeQuestion === "question5" ? "×" : "+"}</span>
+              </div>
+              <div
+                className={`${
+                  activeQuestion === "question5"
+                    ? " scale-y-100 h-[auto] p-5"
+                    : " scale-y-0 h-[0px] "
+                } duration-300 origin-top text-[18px] md:text-[24px]`}
+              >
+                <p>
+                  Netflix has an extensive library of feature films,
+                  documentaries, TV shows, anime, award-winning Netflix
+                  originals, and more. Watch as much as you want, anytime you
+                  want.
+                </p>
+              </div>
+            </div>
+            {/* Question6 */}
+            <div className="bg-[rgb(45,45,45)] text-white mb-[15px]">
+              <div
+                className="p-[20px] text-[30px] border-b-2 border-black flex cursor-pointer justify-between hover:bg-[rgb(65,65,65)] transition-all duration-300 items-center"
+                onClick={() => {
+                  if (activeQuestion === "question6") {
+                    setActiveQuestion("");
+                  } else {
+                    setActiveQuestion("question6");
+                  }
+                }}
+              >
+                <h3 className="text-[18px] md:text-[24px]">Is Netflix good for kids?</h3>
+                <span>{activeQuestion === "question6" ? "×" : "+"}</span>
+              </div>
+              <div
+                className={`${
+                  activeQuestion === "question6"
+                    ? " scale-y-100 h-[auto] p-5"
+                    : " scale-y-0 h-[0px] "
+                } duration-300 origin-top text-[18px] md:text-[24px]`}
+              >
+                <p>
+                  The Netflix Kids experience is included in your membership to
+                  give parents control while kids enjoy family-friendly TV shows
+                  and movies in their own space.
+                </p>
+                <br />
+                <p>
+                  Kids profiles come with PIN-protected parental controls that
+                  let you restrict the maturity rating of content kids can watch
+                  and block specific titles you don’t want kids to see.
+                </p>
+              </div>
+            </div>
           </div>
+          {/* mailInput */}
+          <p className=" text-[20px] py-[20px] text-white text-center">
+              Ready to watch? Enter your email to crat or restart your
+              membership
+            </p>
+            <div className="max-w-[700px] mx-auto mt-7 sm:px-3 px-10">
+              <form
+                action=""
+                className="grid sm:grid-cols-[70%_Auto] grid-cols-1 gap-5 items-center"
+              >
+                <input
+                  type="text"
+                  className=" text-lg h-12 pl-5 border border-white bg-[transparent]"
+                  placeholder="Email Address"
+                />
+                <button className="text-2xl bg-red-600 text-white px-3 py-3 rounded hover:bg-[rgb(193,17,25)] transition-all duration-300">
+                  Get Started ＞
+                </button>
+              </form>
+            </div>
         </div>
       </section>
+      {/* Footer Section */}
+
+
     </>
   );
 };
