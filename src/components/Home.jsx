@@ -241,7 +241,9 @@ const Home = () => {
                   }
                 }}
               >
-                <h3 className="text-[18px] md:text-[24px]">How much does Netflix cost?</h3>
+                <h3 className="text-[18px] md:text-[24px]">
+                  How much does Netflix cost?
+                </h3>
                 <span>{activeQuestion === "question2" ? "×" : "+"}</span>
               </div>
               <div
@@ -271,7 +273,9 @@ const Home = () => {
                   }
                 }}
               >
-                <h3 className="text-[18px] md:text-[24px]">Where can I watch?</h3>
+                <h3 className="text-[18px] md:text-[24px]">
+                  Where can I watch?
+                </h3>
                 <span>{activeQuestion === "question3" ? "×" : "+"}</span>
               </div>
               <div
@@ -339,7 +343,9 @@ const Home = () => {
                   }
                 }}
               >
-                <h3 className="text-[18px] md:text-[24px]">What can I watch on Netflix?</h3>
+                <h3 className="text-[18px] md:text-[24px]">
+                  What can I watch on Netflix?
+                </h3>
                 <span>{activeQuestion === "question5" ? "×" : "+"}</span>
               </div>
               <div
@@ -369,7 +375,9 @@ const Home = () => {
                   }
                 }}
               >
-                <h3 className="text-[18px] md:text-[24px]">Is Netflix good for kids?</h3>
+                <h3 className="text-[18px] md:text-[24px]">
+                  Is Netflix good for kids?
+                </h3>
                 <span>{activeQuestion === "question6" ? "×" : "+"}</span>
               </div>
               <div
@@ -395,29 +403,132 @@ const Home = () => {
           </div>
           {/* mailInput */}
           <p className=" text-[20px] py-[20px] text-white text-center">
-              Ready to watch? Enter your email to crat or restart your
-              membership
-            </p>
-            <div className="max-w-[700px] mx-auto mt-7 sm:px-3 px-10">
-              <form
-                action=""
-                className="grid sm:grid-cols-[70%_Auto] grid-cols-1 gap-5 items-center"
-              >
-                <input
-                  type="text"
-                  className=" text-lg h-12 pl-5 border border-white bg-[transparent]"
-                  placeholder="Email Address"
-                />
-                <button className="text-2xl bg-red-600 text-white px-3 py-3 rounded hover:bg-[rgb(193,17,25)] transition-all duration-300">
-                  Get Started ＞
-                </button>
-              </form>
-            </div>
+            Ready to watch? Enter your email to crat or restart your membership
+          </p>
+          <div className="max-w-[700px] mx-auto mt-7 sm:px-3 px-10">
+            <form
+              action=""
+              className="grid sm:grid-cols-[70%_Auto] grid-cols-1 gap-5 items-center"
+            >
+              <input
+                type="text"
+                className=" text-lg h-12 pl-5 border border-white bg-[transparent]"
+                placeholder="Email Address"
+              />
+              <button className="text-2xl bg-red-600 text-white px-3 py-3 rounded hover:bg-[rgb(193,17,25)] transition-all duration-300">
+                Get Started ＞
+              </button>
+            </form>
+          </div>
         </div>
       </section>
       {/* Footer Section */}
-
-
+      <footer className="w-[100%] bg-black border-t-[7px] border-t-[#605d5d] sm:py-[50px] py-[50px]">
+        <div className="max-w-[1170px] mx-auto px-4 ">
+          <h3 className="underline text-[16px] text-white/70">
+            <a href="">Questions? Contact us.</a>
+          </h3>
+        </div>
+        <div className="py-[30px] pl-[20px] grid sm:grid-cols-4 grid-cols-2 text-white/70  text-[14px] underline ">
+          <div>
+            <ul>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Faq</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Investor Relations</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Buy Gift Cards</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Cookie Preferences</a>
+              </li>
+              <br />
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Speed Test</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Help Center</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Jobs</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Ways to Watch</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Corporate Information</a>
+              </li>
+              <br />
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Legal Notices</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Account</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Netflix Shop</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Terms of Use</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Contact Us</a>
+              </li>
+              <br />
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Only on Netflix</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Media Center</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Redeem Gift Cards</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Privacy</a>
+              </li>
+              <li className="mb-[10px] active:text-red-600">
+                <a href="#">Act on Specified Commercial Transactions</a>
+              </li>
+              <li className="mb-[10px]">
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div className="relative">
+            <img
+              src={Earth}
+              alt=""
+              className="w-4 absolute top-[10px] left-[5px]"
+            />
+            <select
+              name=""
+              id=""
+              className="bg-black text-white sm:p-[5px_25px] p-[5px_20px] border-white border rounded"
+            >
+              <option value="">English</option>
+              <option value="">日本語</option>
+            </select>
+          </div>
+        </div>
+        <h3 className="text-white/70 pt-[20px]">Netflix India</h3>
+      </footer>
     </>
   );
 };
